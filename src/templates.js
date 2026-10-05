@@ -105,7 +105,9 @@ export function footer(route) {
       <span>© ${site.year} ${site.alternateName}</span>
       <span class="footer-legal"><a href="${base}/privacy/">${esc(ui.privacy)}</a><a href="${base}/medical-disclaimer/">${esc(ui.disclaimer)}</a><a href="${base}/html-sitemap/">${esc(ui.sitemap)}</a></span>
       <span>${esc(ui.footerTag)}</span>
-    </div></footer>`
+    </div>
+    <p class="site-credit"><a href="https://www.powershift.space/" target="_blank" rel="noopener noreferrer">${esc(ui.poweredBy)} <span>Power Shift</span></a></p>
+  </footer>`
 }
 
 export function mobileBar(route) {

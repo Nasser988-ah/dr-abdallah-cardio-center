@@ -37,6 +37,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--red);outline-offset
 .footer-bottom{gap:16px;flex-wrap:wrap}
 .footer-legal{display:flex;gap:14px}
 .footer-legal a:hover{color:#fff}
+.site-credit{margin:18px 0 0;text-align:center;font:11px/'DM Sans',sans-serif;letter-spacing:.08em;color:#6f8d90}
+.site-credit a{color:inherit}
+.site-credit span{color:#c9dcdd;font-weight:600;letter-spacing:.14em}
+.site-credit a:hover,.site-credit a:hover span{color:#fff}
 .fact-list{display:grid;gap:12px;margin-top:28px}
 .fact-row{display:grid;gap:4px;padding-bottom:12px;border-bottom:1px solid var(--line)}
 .fact-row span{font-size:11px;color:var(--muted)}
