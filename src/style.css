@@ -86,6 +86,9 @@ html[dir="ltr"] .footer-doctor{border-right:0;border-left:1px solid rgba(255,255
 html[dir="ltr"] .dropdown-menu{right:auto;left:-20px}
 html[dir="ltr"] .rich-copy .note,html[dir="ltr"] .disclaimer-box{border-right:0;border-left:3px solid var(--teal);padding-right:0;padding-left:12px}
 html[dir="ltr"] .disclaimer-box{border-left-color:var(--red)}
+html[dir="ltr"] .service-card>a{left:auto;right:27px}
+html[dir="ltr"] .service-card p{padding-right:34px}
+html[dir="ltr"] .service-card>a svg,html[dir="ltr"] .button svg{transform:scaleX(-1)}
 @media(max-width:900px){
   .lang-switch{order:2}
   .menu-toggle{order:3}
