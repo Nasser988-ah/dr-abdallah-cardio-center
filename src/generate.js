@@ -14,22 +14,11 @@ function writeHtml(file, html) {
 }
 
 function sitemapXml() {
-  const urls = indexableRoutes()
-  const body = urls
-    .map((route) => {
-      const loc = absoluteUrl(route.urlPath)
-      const ar = absoluteUrl(route.lang === 'ar' ? route.urlPath : route.altPath)
-      const en = absoluteUrl(route.lang === 'en' ? route.urlPath : route.altPath)
-      return `  <url>
-    <loc>${loc}</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="${ar}" />
-    <xhtml:link rel="alternate" hreflang="en" href="${en}" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="${ar}" />
-  </url>`
-    })
+  const body = indexableRoutes()
+    .map((route) => `  <url>\n    <loc>${absoluteUrl(route.urlPath)}</loc>\n  </url>`)
     .join('\n')
   return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${body}
 </urlset>
 `
@@ -41,6 +30,7 @@ Allow: /
 
 Disallow: /api/private/
 
+Sitemap: ${site.origin}/sitemaps/pages.xml
 Sitemap: ${site.origin}/sitemap.xml
 `
 }
@@ -52,8 +42,10 @@ export function generateSite() {
     writeHtml(route.file, renderHtml(route))
     input[route.id] = resolve(rootDir, route.file)
   }
-  mkdirSync(resolve(rootDir, 'public'), { recursive: true })
-  writeFileSync(resolve(rootDir, 'public/sitemap.xml'), sitemapXml(), 'utf8')
+  const xml = sitemapXml()
+  mkdirSync(resolve(rootDir, 'public/sitemaps'), { recursive: true })
+  writeFileSync(resolve(rootDir, 'public/sitemap.xml'), xml, 'utf8')
+  writeFileSync(resolve(rootDir, 'public/sitemaps/pages.xml'), xml, 'utf8')
   writeFileSync(resolve(rootDir, 'public/robots.txt'), robotsTxt(), 'utf8')
   return input
 }

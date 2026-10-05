@@ -3,4 +3,5 @@ Allow: /
 
 Disallow: /api/private/
 
+Sitemap: https://www.dr-abdallah-cardio-center.com/sitemaps/pages.xml
 Sitemap: https://www.dr-abdallah-cardio-center.com/sitemap.xml

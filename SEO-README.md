@@ -169,7 +169,7 @@ Real `<a href>` links only for SEO navigation.
 ## robots.txt and sitemap
 
 - Robots: `https://www.dr-abdallah-cardio-center.com/robots.txt`
-- XML sitemap: `https://www.dr-abdallah-cardio-center.com/sitemap.xml`
+- XML sitemap: `https://www.dr-abdallah-cardio-center.com/sitemaps/pages.xml` (also published at `/sitemap.xml`)
 - HTML sitemap: `/html-sitemap/` and `/en/html-sitemap/` (not `/sitemap/`, which collides with `sitemap.xml` on Vercel)
 
 `robots.txt` allows public crawl and points to the XML sitemap. It does not block CSS, JS, images, or fonts.
@@ -220,7 +220,7 @@ Correct third-party listings if they disagree with this NAP (especially hours an
 
 1. Add a **Domain** property for `dr-abdallah-cardio-center.com` (covers www and apex).
 2. Confirm the live canonical is `https://www.dr-abdallah-cardio-center.com/`.
-3. Submit `https://www.dr-abdallah-cardio-center.com/sitemap.xml`.
+3. Submit `https://www.dr-abdallah-cardio-center.com/sitemaps/pages.xml` (do not submit the homepage). If `/sitemap.xml` still shows a cached fetch error, leave it and use this new URL.
 4. URL Inspection for the URLs listed below.
 5. Watch Page Indexing, Enhancements (structured data), Core Web Vitals, and hreflang/canonical issues.
 6. Request indexing on important URLs after they return 200 with the new HTML. Sitemap submission is not an indexing guarantee.
@@ -240,7 +240,7 @@ Arabic:
 - `https://www.dr-abdallah-cardio-center.com/contact/`
 - `https://www.dr-abdallah-cardio-center.com/medical-guides/`
 - `https://www.dr-abdallah-cardio-center.com/robots.txt`
-- `https://www.dr-abdallah-cardio-center.com/sitemap.xml`
+- `https://www.dr-abdallah-cardio-center.com/sitemaps/pages.xml`
 
 English:
 
