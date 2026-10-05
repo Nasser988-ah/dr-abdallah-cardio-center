@@ -30,8 +30,18 @@ Allow: /
 
 Disallow: /api/private/
 
-Sitemap: ${site.origin}/sitemaps/pages.xml
-Sitemap: ${site.origin}/sitemap.xml
+Sitemap: ${site.origin}/xml-sitemap/
+`
+}
+
+function sitemapApi(xml) {
+  return `export default function handler(req, res) {
+  res.statusCode = 200
+  res.setHeader('Content-Type', 'application/xml; charset=utf-8')
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate')
+  res.end(${JSON.stringify(xml)})
+}
 `
 }
 
@@ -44,8 +54,12 @@ export function generateSite() {
   }
   const xml = sitemapXml()
   mkdirSync(resolve(rootDir, 'public/sitemaps'), { recursive: true })
+  mkdirSync(resolve(rootDir, 'public/xml-sitemap'), { recursive: true })
+  mkdirSync(resolve(rootDir, 'api'), { recursive: true })
   writeFileSync(resolve(rootDir, 'public/sitemap.xml'), xml, 'utf8')
   writeFileSync(resolve(rootDir, 'public/sitemaps/pages.xml'), xml, 'utf8')
+  writeFileSync(resolve(rootDir, 'public/xml-sitemap/index.html'), xml, 'utf8')
+  writeFileSync(resolve(rootDir, 'api/sitemap.js'), sitemapApi(xml), 'utf8')
   writeFileSync(resolve(rootDir, 'public/robots.txt'), robotsTxt(), 'utf8')
   return input
 }
