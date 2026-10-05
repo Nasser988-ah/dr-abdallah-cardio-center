@@ -54,7 +54,7 @@ Arabic is the default language (`hreflang="x-default"` points to Arabic). Englis
 - `/faq/` ↔ `/en/faq/`
 - `/privacy/` ↔ `/en/privacy/`
 - `/medical-disclaimer/` ↔ `/en/medical-disclaimer/`
-- `/sitemap/` ↔ `/en/sitemap/`
+- `/html-sitemap/` ↔ `/en/html-sitemap/`
 
 ### Services (existing slugs kept)
 
@@ -170,7 +170,7 @@ Real `<a href>` links only for SEO navigation.
 
 - Robots: `https://www.dr-abdallah-cardio-center.com/robots.txt`
 - XML sitemap: `https://www.dr-abdallah-cardio-center.com/sitemap.xml`
-- HTML sitemap: `/sitemap/` and `/en/sitemap/`
+- HTML sitemap: `/html-sitemap/` and `/en/html-sitemap/` (not `/sitemap/`, which collides with `sitemap.xml` on Vercel)
 
 `robots.txt` allows public crawl and points to the XML sitemap. It does not block CSS, JS, images, or fonts.
 

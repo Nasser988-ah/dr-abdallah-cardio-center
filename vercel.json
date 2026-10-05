@@ -1,3 +1,17 @@
 {
-  "trailingSlash": true
+  "trailingSlash": true,
+  "headers": [
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        { "key": "Content-Type", "value": "application/xml; charset=utf-8" }
+      ]
+    }
+  ],
+  "redirects": [
+    { "source": "/sitemap", "destination": "/html-sitemap/", "permanent": true },
+    { "source": "/sitemap/", "destination": "/html-sitemap/", "permanent": true },
+    { "source": "/en/sitemap", "destination": "/en/html-sitemap/", "permanent": true },
+    { "source": "/en/sitemap/", "destination": "/en/html-sitemap/", "permanent": true }
+  ]
 }

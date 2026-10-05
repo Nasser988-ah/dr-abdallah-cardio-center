@@ -19,7 +19,7 @@ const pageDefs = [
   { page: 'guide-cad', path: '/medical-guides/coronary-artery-disease/', type: 'article', indexable: true },
   { page: 'privacy', path: '/privacy/', type: 'legal', indexable: true },
   { page: 'medical-disclaimer', path: '/medical-disclaimer/', type: 'legal', indexable: true },
-  { page: 'sitemap', path: '/sitemap/', type: 'sitemap', indexable: true }
+  { page: 'sitemap', path: '/html-sitemap/', type: 'sitemap', indexable: true }
 ]
 
 export const servicePages = [

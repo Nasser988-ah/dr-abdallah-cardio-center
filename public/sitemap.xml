@@ -241,15 +241,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dr-abdallah-cardio-center.com/medical-disclaimer/" />
   </url>
   <url>
-    <loc>https://www.dr-abdallah-cardio-center.com/sitemap/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.dr-abdallah-cardio-center.com/sitemap/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.dr-abdallah-cardio-center.com/en/sitemap/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dr-abdallah-cardio-center.com/sitemap/" />
+    <loc>https://www.dr-abdallah-cardio-center.com/html-sitemap/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.dr-abdallah-cardio-center.com/html-sitemap/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dr-abdallah-cardio-center.com/en/html-sitemap/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dr-abdallah-cardio-center.com/html-sitemap/" />
   </url>
   <url>
-    <loc>https://www.dr-abdallah-cardio-center.com/en/sitemap/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.dr-abdallah-cardio-center.com/sitemap/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.dr-abdallah-cardio-center.com/en/sitemap/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dr-abdallah-cardio-center.com/sitemap/" />
+    <loc>https://www.dr-abdallah-cardio-center.com/en/html-sitemap/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.dr-abdallah-cardio-center.com/html-sitemap/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dr-abdallah-cardio-center.com/en/html-sitemap/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dr-abdallah-cardio-center.com/html-sitemap/" />
   </url>
 </urlset>
